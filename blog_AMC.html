@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum de Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            width: 70%;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .comment-section {
+            margin-top: 30px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+        }
+        button {
+            padding: 10px;
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .comment {
+            background: #e4e4e4;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gender Inequality: Still a Long Way to Go</h1>
+        <p><strong>January 29, 2025</strong></p>
+        <p>Alright guys, let’s talk about something that still makes headlines today: <strong>gender inequality</strong>. We’ve come a long way, but let’s be real, we’re not there yet. Women around the world, even in developed countries, still struggle to climb the social ladder when they are doing housework, careers, and the pressure to be the "perfect" mother.</p>
+        
+        <h2>Women’s Conditions in Developed Countries</h2>
+        <p>Sure, things have improved... like the right for women to vote, work, and have careers. But does that mean equality? Nope. Women still face <strong>unfair wages</strong>, <strong>domestic violence</strong>, and discrimination at work. According to the World Economic Forum’s Global Gender Gap Report 2023, women still earn on average 20% less than men for the same job. In politics? Women are still underrepresented, with only 26% of parliamentary places worldwide hold by women, according to UN Women (="ONU Femmes" in french). In media? Objectified and judged for their looks but not for their achievements. And let’s not even start on social media, where misogyny goes wild.</p>
+        
+        <h2>The Double Day Struggle</h2>
+        <p>Ever heard of the <strong>double day</strong>? It’s when a woman works a full-time job, then comes home to do the <strong>washing up, mop the floor</strong>, and take care of the kids. Meanwhile, her male partner, often called "breadwinner" who relax himself while the woman do household chores. Housework isn’t just "helping out", it’s a shared responsibility. Yet, many women are still expected to be the primary <strong>caregiver</strong> and earner, putting their careers on hold for <strong>motherhood</strong>. A 2022 study by the Pew Research Center found that women in heterosexual couples still do 70% more unpaid household labor than men.</p>
+        
+        <h2>The Roe v. Wade Impact</h2>
+        <p>And then there’s the whole debate on women’s rights over their own bodies. The overturning of <strong>Roe v. Wade</strong> in the U.S. was a major rewind. It’s crazy that in 2025, women are still fighting for control over their reproductive ability and rights. According to The Guttmacher Institute, abortion restrictions impact all low-income women and women of color and different etchnicity, making it harder for them to access safe way to heal and get healthcare. If men could get pregnant, do you really think this would be an issue?</p>
+        
+        <h2>Final Thoughts</h2>
+        <p>Gender inequality isn’t just about wages or politics—it’s about respect, opportunity, and fairness. Roe V Wade cancel is just a huge stepback and an enormous fuck for women who deserve their rights after all the fight their did for compare to man. Women deserve better. It’s time to change our opinion, and that starts with all of us. What do you think? Drop your thoughts in the comments below!</p>
+        
+        <div class="comment-section">
+            <h3>Leave a comment</h3>
+            <textarea id="commentText" placeholder="You're comment right here..."></textarea>
+            <button onclick="addComment()">Share</button>
+            <div id="comments"></div>
+        </div>
+    </div>
+
+    <script>
+        function addComment() {
+            let commentText = document.getElementById("commentText").value;
+            if (commentText.trim() !== "") {
+                let commentDiv = document.createElement("div");
+                commentDiv.className = "comment";
+                commentDiv.textContent = commentText;
+                document.getElementById("comments").appendChild(commentDiv);
+                document.getElementById("commentText").value = "";
+            }
+        }
+    </script>
+</body>
+</html>
